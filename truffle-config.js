@@ -18,9 +18,9 @@
  */
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-const mnemonic = "talk velvet inmate bamboo hover puzzle era abuse ride outside rent trip spike tide awesome";
-const mnemonicTestnet;
-const addressTestnet;
+const mnemonicRopsten = "talk velvet inmate bamboo hover puzzle era abuse ride outside rent trip spike tide awesome";
+// const mnemonicTestnet;
+// const addressTestnet;
 
 module.exports = {
   /**
@@ -41,16 +41,16 @@ module.exports = {
       network_id: 33,
       from: "0xcd2a3d9f938e13cd947ec05abc7fe734df8dd826"
     },
-    testnet: {
-      provider: () => new HDWalletProvider(
-        mnemonicTestnet, "http://localhost:4444"
-      ),
-      network_id: 32,
-      from: addressTestnet
-    },
+    // testnet: {
+    //   provider: () => new HDWalletProvider(
+    //     mnemonicTestnet, "http://localhost:4444"
+    //   ),
+    //   network_id: 32,
+    //   from: addressTestnet
+    // },
     ropstenInfura: {
       provider: () => new HDWalletProvider(
-        mnemonic, "https://ropsten.infura.io/v3/PROJECT_ID"
+        mnemonicRopsten, "https://ropsten.infura.io/v3/PROJECT_ID"
       ),
       network_id: 3
     }

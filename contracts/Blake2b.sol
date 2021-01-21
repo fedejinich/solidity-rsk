@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.22 <0.8.0;
 
+// Extracted from EIP-152 https://github.com/ethereum/EIPs/blob/master/EIPS/eip-152.md
 contract Blake2b {
   event ResultOk();
   event Debug(bytes32);

@@ -4,6 +4,7 @@ contract PrecompiledContractsUtil {
     event PrecompiledSuccess(address);
     event PrecompiledFailure(address);
 
+    // just to call a precompiled contract and check if that call was succesful or not
     function callPrec(address precAddress, bytes32 input, uint256 inputLen, uint256 outLen) public returns (bool) {
         uint256 retval;
 

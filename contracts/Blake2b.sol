@@ -42,7 +42,7 @@ contract Blake2b {
     return F(rounds, h, m, t, f);
   }
 
-  function runTest() public view returns (bool) {
+  function runTest() public {
     bytes32 expectedOutput1 = hex"ba80a53f981c4d0d6a2797b69f12f6e94c212f14685ac4b74b12bb6fdbffa2d1";
     bytes32 expectedOutput2 = hex"7d87c5392aab792dc252d5de4533cc9518d38aa8dbf1925ab92386edd4009923";
 
@@ -54,6 +54,6 @@ contract Blake2b {
     require(matchExpected1, "blake2b.f: first value doesn't match expected value");
     require(matchExpected2, "blake2b.f: second value doesn't match expected value");
 
-    return true;
+    emit ResultOk();
   }
 }

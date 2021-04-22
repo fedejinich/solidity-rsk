@@ -53,6 +53,12 @@ module.exports = {
         mnemonicRopsten, "https://ropsten.infura.io/v3/PROJECT_ID"
       ),
       network_id: 3
+    },
+    gethRegtest: {
+      provider: () => new HDWalletProvider(
+        "c85ef7d79691fe79573b1a7064c19c1a9819ebdbd1faaab1a8ec92344438aaf4", "http://localhost:8545"
+      ),
+      network_id: 1337
     }
   },
 

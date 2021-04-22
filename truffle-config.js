@@ -18,9 +18,6 @@
  */
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-const mnemonicRopsten = "talk velvet inmate bamboo hover puzzle era abuse ride outside rent trip spike tide awesome";
-// const mnemonicTestnet;
-// const addressTestnet;
 
 module.exports = {
   /**
@@ -50,10 +47,10 @@ module.exports = {
     },
     testnet: {
       provider: () => new HDWalletProvider(
-        mnemonicTestnet, "http://localhost:4444"
+        "c85ef7d79691fe79573b1a7064c19c1a9819ebdbd1faaab1a8ec92344438aaf4", "http://localhost:4444"
       ),
       network_id: 31,
-      from: addressTestnet
+      from: "0xcd2a3d9f938e13cd947ec05abc7fe734df8dd826"
     },
     gethDev: {
       provider: () => new HDWalletProvider(

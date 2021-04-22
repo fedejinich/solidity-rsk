@@ -38,23 +38,24 @@ module.exports = {
       provider: () => new HDWalletProvider(
         "c85ef7d79691fe79573b1a7064c19c1a9819ebdbd1faaab1a8ec92344438aaf4", "http://localhost:4444"
       ),
-      network_id: 33,
+      network_id: 33, // chainId 32 => devnet
       from: "0xcd2a3d9f938e13cd947ec05abc7fe734df8dd826"
     },
-    // testnet: {
-    //   provider: () => new HDWalletProvider(
-    //     mnemonicTestnet, "http://localhost:4444"
-    //   ),
-    //   network_id: 32,
-    //   from: addressTestnet
-    // },
-    ropstenInfura: {
+    regtestWs: {
       provider: () => new HDWalletProvider(
-        mnemonicRopsten, "https://ropsten.infura.io/v3/PROJECT_ID"
+        "c85ef7d79691fe79573b1a7064c19c1a9819ebdbd1faaab1a8ec92344438aaf4", "ws://localhost:4445/websocket"
       ),
-      network_id: 3
+      network_id: 33, // chainId 32 => devnet
+      from: "0xcd2a3d9f938e13cd947ec05abc7fe734df8dd826"
     },
-    gethRegtest: {
+    testnet: {
+      provider: () => new HDWalletProvider(
+        mnemonicTestnet, "http://localhost:4444"
+      ),
+      network_id: 31,
+      from: addressTestnet
+    },
+    gethDev: {
       provider: () => new HDWalletProvider(
         "c85ef7d79691fe79573b1a7064c19c1a9819ebdbd1faaab1a8ec92344438aaf4", "http://localhost:8545"
       ),
